@@ -1,0 +1,17 @@
+class EvenNumberGenerator:
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+    def generate_even_numbers(self):
+        return list(filter(lambda x: x % 2 == 0, range(self.start, self.end + 1)))
+
+
+def main():
+    even_number_generator = EvenNumberGenerator(4, 30)
+    even_numbers = even_number_generator.generate_even_numbers()
+    print(even_numbers)
+
+
+if __name__ == "__main__":
+    main()
